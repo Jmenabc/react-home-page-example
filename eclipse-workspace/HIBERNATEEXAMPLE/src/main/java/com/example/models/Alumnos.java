@@ -1,71 +1,68 @@
 package com.example.models;
 
+
+
 import jakarta.persistence.*;
 
 /*
  * Modelo alumno que usaremos para recoger la información de la base de datos
  * @author Jmenabc
  * */
-@Entity
-@Table(name = "ejemploAlumno")
-public class Alumnos {
 
+@Entity
+@Table(name = "meme")
+public class Alumnos {
 	// Atributos
 	@Id
 	@Column(name = "id")
 	private int Id;
 
-	@Column(name = "alumno_nombre")
-	private String alumno_nombre;
+	@Column(name = "name")
+	private String nombre;
 
-	@Column(name = "alumno_apellido")
-	private String alumno_apellido;
-
-	@Column(name = "alumno_apellido2")
-	private String alumno_apellido2;
+	@Column(name = "lastname")
+	private String apellido;
 
 	// Constructores
-	public Alumnos(String alumno_nombre, String alumno_apellido, String alumno_apellido2) {
-		super();
-		this.alumno_nombre = alumno_nombre;
-		this.alumno_apellido = alumno_apellido;
-		this.alumno_apellido2 = alumno_apellido2;
-	}
 
 	public Alumnos() {
 	}
 
-	// Getters y Setters
-
-	public String getAlumno_nombre() {
-		return alumno_nombre;
+	public Alumnos(String nombre, String apellido) {
+		this.nombre = nombre;
+		this.apellido = apellido;
 	}
 
-	public void setAlumno_nombre(String alumno_nombre) {
-		this.alumno_nombre = alumno_nombre;
+	// Setters y getters
+	public int getId() {
+		return Id;
 	}
 
-	public String getAlumno_apellido() {
-		return alumno_apellido;
+	public void setId(int id) {
+		Id = id;
 	}
 
-	public void setAlumno_apellido(String alumno_apellido) {
-		this.alumno_apellido = alumno_apellido;
+	public String getNombre() {
+		return nombre;
 	}
 
-	public String getAlumno_apellido2() {
-		return alumno_apellido2;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
-	public void setAlumno_apellido2(String alumno_apellido2) {
-		this.alumno_apellido2 = alumno_apellido2;
+	public String getApellido() {
+		return apellido;
 	}
 
-	// toString
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	// ToString
 	@Override
 	public String toString() {
-		return "Alumnos [Id=" + Id + ", alumno_nombre=" + alumno_nombre + ", alumno_apellido=" + alumno_apellido
-				+ ", alumno_apellido2=" + alumno_apellido2 + "]";
+		return "Alumnos [Id=" + Id + ", nombre=" + nombre + ", apellido=" + apellido + "]";
 	}
 
 }
+

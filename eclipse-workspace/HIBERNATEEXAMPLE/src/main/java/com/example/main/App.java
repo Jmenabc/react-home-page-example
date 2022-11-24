@@ -6,6 +6,10 @@ import org.hibernate.cfg.Configuration;
 
 import com.example.models.Alumnos;
 
+
+
+
+
 public class App {
 
 	public static void main(String[] args) {
@@ -19,19 +23,19 @@ public class App {
 
 		try {
 			// Declaramos el objeto Alumno
-			Alumnos alumno = new Alumnos("Javier", "Mena-Bernal", "Carranza");
+			Alumnos al1 = new Alumnos("Javier","Mena");
 			// Iniciamos la transaccion
 			session.beginTransaction();
 			System.out.print("Empezando transaccion");
 			// session.save(customer1); // deprecated method
 			// Guardamos la transaccion
-			session.persist(alumno);
+			session.persist(al1);
 			// Enviamos la transaccion
 			System.out.print("Enviando transaccion");
 			session.getTransaction().commit();
 
 			System.out.println("Se ha añadido correctamente");
-			System.out.println(alumno);
+			System.out.println(al1);
 			// Cerramos la sesion
 			System.out.print("Cerrando Sesion");
 			session.close();
