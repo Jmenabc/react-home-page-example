@@ -11,6 +11,16 @@ function App() {
         <Header></Header>
       </div>
 
+      <div class="in-front-gif">
+        <h1 class="mbr-fonts-style mb-3 mbr-section-title display-1">
+          <strong>
+            I’m Product
+            <br />
+            Designer
+          </strong>
+        </h1>
+      </div>
+
     </div>
   );
 }
